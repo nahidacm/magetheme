@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#fff; font:12px/1.35 Arial, Helvetica, sans-serif; color:#000; text-align:center; }
+body          { background:#fff; font:12px/1.35 Arial, Helvetica, sans-serif; color:#000; text-align:center; line-height: 20px; }
 
 img           { border:0; vertical-align:top; }
 
@@ -35,12 +35,12 @@ a:hover       { text-decoration:none; }
 :focus        { outline:0; }
 
 /* Headings */
-h1            { font-size:20px; font-weight:normal; line-height:1.15; }
-h2            { font-size:18px; font-weight:normal; line-height:1.25; }
-h3            { font-size:16px; font-weight:bold; line-height:1.25; }
-h4            { font-size:14px; font-weight:bold; }
-h5            { font-size:12px; font-weight:bold; }
-h6            { font-size:11px; font-weight:bold; }
+h1            { font-size:24px; font-weight:normal; line-height:1.15; }
+h2            { font-size:22px; font-weight:normal; line-height:1.25; }
+h3            { font-size:20px; font-weight:400; line-height:1.25; }
+h4            { font-size:18px; font-weight:400; }
+h5            { font-size:16px; font-weight:400; }
+h6            { font-size:11px; font-weight:400; }
 
 /* Forms */
 form          { display:inline; }
@@ -61,7 +61,7 @@ q:before,
 q:after       { content:''; }
 small,big     { font-size:1em; }
 sup           { font-size:1em; vertical-align:top; }
-
+p{line-height: 20px;}
 /* Lists */
 ul,ol         { list-style:none; }
 
@@ -668,8 +668,8 @@ tr.summary-details-excluded { font-style:italic; }
     background-color: #FFFFFF;
 }
 .products-grid li.item:hover {
-  border: 1px solid #E97C15;
-  transition: all 0.2s ease-in-out 0s;
+    border: 1px solid #E97C15;
+    transition: all 0.2s ease-in-out 0s;
 }
 .products-grid .product-image { display:block; width:218px; height:218px; margin:0 0 10px; }
 .products-grid .product-name { margin:0 0 5px; font-weight:bold; font-size:13px; }
@@ -1323,25 +1323,27 @@ tr.summary-details-excluded { font-style:italic; }
     text-align: center;
 }
 .featured-product-block .load-more {
-  border-top: 1px dotted #CCCCCC;
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 0;
-  padding: 10px 0;
-  text-align: center;
-  color: #3B3B3B;
-  text-decoration: none;
+    border-top: 1px dotted #CCCCCC;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    padding: 10px 0;
+    text-align: center;
+    color: #3B3B3B;
+    text-decoration: none;
 }
 .featured-product-block .load-more:hover{
     text-decoration: underline;
 }
 .signup-box{
     border: 1px solid #DDDDDD;
+    padding: 18px;
 }
 .signup-box .company-info{
     width: 40%;
     float: right;
+    text-align: center;
 }
 .clear{
     clear: both;
@@ -1358,26 +1360,60 @@ tr.summary-details-excluded { font-style:italic; }
     margin: 30px 0 20px 20px;
 }
 #newsletter {
-  padding: 3px 0;
-  width: 230px;
-  height: 25px;
-}
-.footer-boxes .footer-box{
+    padding: 3px 0;
     width: 230px;
+    height: 25px;
+}
+.company-info .phone {
+    margin: 7px 0;
+    font-size: 15px;
+    color: #FE9930;
+    text-align: center;
+}
+.signup-box-separator {
+    border: 1px solid #DDD;
+    float: left;
+    height: 125px;
+    margin-left: 90px;
+}
+.footer-container {
+    margin: 20px 0;
+}
+.footer-boxes .footer-box {
+    border: 1px solid #DDDDDD;
     float: left;
     margin-right: 10px;
-    border: 1px solid #DDDDDD;
+    padding: 20px;
+    width: 200px;
+    min-height: 186px;
 }
-.footer-social-wrapper .custom-content.image-hover a {
-  height: 40px;
-  overflow: hidden;
-  width: 40px;
+.footer-boxes .footer-box.last{
+    margin-right: 0;
+}
+.footer-box h4 {
+  margin-bottom: 15px;
+}
+.footer-box ul li {
+  height: 24px;
+}
+.footer-box ul li a{
+    text-decoration: none;
+    color: #3B3B3B;
+}
+.footer-box ul li a:hover {
+  text-decoration: underline;
 }
 .footer-social-wrapper {
-  line-height: 25px;
+    line-height: 25px;
 }
 .footer-social-wrapper .custom-content.image-hover a {
-  height: 40px;
-  overflow: hidden;
-  width: 40px;
+    height: 40px;
+    overflow: hidden;
+    width: 40px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.footer-social-wrapper .custom-content.image-hover a:hover img {
+    margin-top: -40px;
 }

@@ -25,6 +25,7 @@
         echo $this->getLayout()->createBlock('newsletter/subscribe')
                 ->setTemplate("newsletter/subscribe.phtml")->toHtml(); 
         ?>
+            <div class="signup-box-separator"></div>
             <div class="company-info">
                 <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_company')->toHtml(); ?>
             </div>
