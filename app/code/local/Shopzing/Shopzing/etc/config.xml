@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config>
+    <global>
+        <page>
+            <layouts>
+                <shopzing_full_width>
+                    <label>Shopzing Home Page</label>
+                    <template>page/shopzing-full-width-home.phtml</template>
+                </shopzing_full_width>
+            </layouts>
+        </page>
+    </global>
+</config>

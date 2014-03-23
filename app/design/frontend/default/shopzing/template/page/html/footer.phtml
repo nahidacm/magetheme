@@ -1,0 +1,29 @@
+<div class="footer-container">
+    <div class="footer-boxes">
+        <div class="footer-box">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_links_column1')->toHtml(); ?>
+        </div>
+        <div class="footer-box">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_links_column2')->toHtml(); ?>
+        </div>
+        <div class="footer-box">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_links_column3')->toHtml(); ?>
+        </div>
+        <div class="footer-box">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_links_column4')->toHtml(); ?>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="payment-logos">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_payment_logos')->toHtml(); ?>
+    </div>
+    <div class="footer">
+        <div class="footer-social-wrapper">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_social')->toHtml(); ?>
+        </div>
+        <div class="copyright">
+            <address><?php echo $this->getCopyright() ?></address>
+        </div>
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_info')->toHtml(); ?>
+    </div>
+</div>

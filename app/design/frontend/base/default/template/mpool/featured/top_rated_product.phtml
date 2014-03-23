@@ -1,0 +1,49 @@
+<?php
+/**
+ * @category     Mpool
+ * @package     Mpool Featured Products
+ * @author      Mahmudur Rahman, Mpool Team <nahidacm@gmail.com>
+ */
+?>
+<?php
+$_helper = $this->helper('catalog/output');
+$_productCollection = $this->getTopRatedProduct();
+
+?>
+
+<div class="top-rated-product-block">
+<div class="top-rated-product-container">
+    <h3><?php echo $this->getData('title') ?></h3>
+
+    <ul class="products-grid">
+        <?php
+    $i = 0;
+
+    foreach ($_productCollection as $_product):
+        ?>
+            <?php if ($i++ % $_columnCount == 0): ?>
+            
+    <?php endif ?>
+            <li class="item<?php if (($i - 1) % $_columnCount == 0): ?> first<?php elseif ($i % $_columnCount == 0): ?> last<?php endif; ?>">
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(218); ?>" width="218" height="218" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+                <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                <?php if ($_product->getRatingSummary()): ?>
+                    <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                <?php endif; ?>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                <div class="actions">
+                    <?php if ($_product->isSaleable()): ?>
+                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                    <?php else: ?>
+                        <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                        <?php endif; ?>
+                </div>
+            </li>
+        
+        
+        
+<?php endforeach ?>
+                </ul>
+    </div>
+</div>
+
