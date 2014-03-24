@@ -1,21 +1,15 @@
 <div class="header-container">
     <div class="header">
         <?php if ($this->getIsHomePage()): ?>
-            <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+            <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img width="160" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php else: ?>
             <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif ?>
         <div class="quick-access">
             <div class="header-middle">
-                <span class="header-contact">
-                    <span class="header-phone">0203 137 2761</span> 
-                    <span class="header-fax">020 3137 2762</span> 
-                    <span class="header-email">sales@shopzing.co.uk</span>
-                </span>
                 <?php echo $this->getChildHtml('topSearch') ?>
             </div>
             <div class="header-right">
-                <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
                 <?php echo $this->getChildHtml('topLinks') ?>
                 <?php echo $this->getChildHtml('store_language') ?>
             </div>

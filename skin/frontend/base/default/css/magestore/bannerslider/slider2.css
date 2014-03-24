@@ -46,12 +46,13 @@
 
 .bannerslide-caborno-slider .jquery-slider-selector
 {
-  background:url(image/slide2//jquery-slider-theme.png) no-repeat 0px -70px;
+  /*background:url(image/slide2//jquery-slider-theme.png) no-repeat 0px -70px;*/
   display:inline;
   float:left;
-  width:16px;
-  height:16px;
+  width:13px;
+  height:13px;
   margin:0 0 0 5px;
+  border: 1px solid #FFFFFF;
 }
 
 .bannerslide-caborno-slider .jquery-slider-selector-current
