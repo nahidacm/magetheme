@@ -1453,3 +1453,15 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-social-wrapper .custom-content.image-hover a:hover img {
     margin-top: -40px;
 }
+.payment-logos {
+  margin: 20px 0;
+}
+.payment-logos img {
+  margin-right: 147px;
+}
+.payment-logos a{
+    display: inline-block;
+}
+.payment-logos a img {
+  margin-right: 0;
+}
