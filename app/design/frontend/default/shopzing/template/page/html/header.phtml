@@ -13,11 +13,3 @@
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
 </div>
-<div class="menu-slider-wrapper">
-    <?php echo $this->getChildHtml('topMenu') ?>
-    <?php
-    echo $this->getLayout()->createBlock('bannerslider/default')
-            ->setTemplate('bannerslider/bannerslider.phtml')
-            ->setBannersliderId(1)->toHtml();
-    ?>
-</div>

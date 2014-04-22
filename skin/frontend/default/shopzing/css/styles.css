@@ -94,14 +94,21 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { padding:20px; text-align:left; }
 .main-container {}
-.main { margin:10px 0; }
+.main { margin:10px 0; background-color: #E5E5E5; }
 
 /* Base Columns */
-.col-left { float:left; width:230px; border:1px solid #ddd; padding:5px 5px 0; }
+.col-left { 
+    float:left; 
+    width:203px; 
+    border:1px solid #ddd; 
+    padding:5px 5px 0; 
+    margin: 0 10px; 
+    background-color: #FFFFFF;
+}
 .col-main { 
     float:left; 
     /*width:736px;*/ 
-    border:1px solid #ddd; 
+    /*border:1px solid #ddd;*/ 
     padding:5px; 
 }
 .col-right { float:right; width:230px; border:1px solid #ddd; padding:5px 5px 0; }
@@ -523,31 +530,98 @@ tr.summary-details-excluded { font-style:italic; }
     width: 236px;
     z-index: 300;
 }
+.col-left .nav-container {
+    margin: -5px -5px 11px;
+    width: 210px;
+}
 #nav a{
     text-decoration: none;
     color: #3B3B3B;
     font-size: 14px;
+    display: block;
 }
 #nav ul{
-    display: none;
+    /*display: none;*/
 }
 #nav ul li{
 
 }
+#nav * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
 #nav li.level-top {
-    height: 40px;
+    /*height: 40px;*/
+    /*padding: 5px 20px 4px;*/
+    position: relative;
+    border-top: solid 1px #FCC077;
+    border-bottom: solid 1px #FCC077;
+}
+#nav li.level-top:hover {
+    background-color: #fff;
+}
+
+#nav li.level-top > a.level-top {
     background: url(../images/arrow.png) no-repeat scroll 210px center rgba(0, 0, 0, 0);
-    padding: 5px 20px 4px;
-}
-#nav li:hover ul{
-    background: #999;
-    border: #fff solid;
-    border-width: 1px;
     display: block;
-    position: absolute;
-    left: 236px;
-    top: 40px;
+    padding: 5px 20px 4px;
+    width:100%;
+    height:100%;
 }
+.col-left #nav li.level-top > a.level-top {
+    background-position: 185px;
+}
+#nav li.level-top > ul {
+    display: none;
+}
+#nav li.level-top:hover > a.level-top {
+    background-image: url(../images/arrow-white.png);
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+#nav li:hover ul{
+    /*background: #FCC077;*/
+    /*border: #fff solid;
+    border-width: 1px;*/
+    display: block;
+    /*position: absolute;
+    left: 236px;
+    top: 40px;*/
+}
+ul.level0, #nav li.level-top > ul {
+    background-color: #fff;
+    border:solid 1px #FCC077;
+    border-left: none;
+  width: 720px;
+  padding-left: 25px;
+  margin-left: -25px;
+  position: absolute;
+  top:-1px;
+  left: 100%;
+    z-index: 8;
+    -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+ul.level0 > li, #nav li.level-top > ul > li {
+  width: 25%;
+  padding: 8px;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul.level0 > li > a, #nav li.level-top > ul > li > a {
+  font-weight: bold;
+}
+ul.level0 > li a:hover, #nav li.level-top > ul > li a:hover {
+    text-decoration: underline;
+}
+
 /********** Navigation > */
 
 /***** Slider */
@@ -576,7 +650,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Sidebar =============================================================================== */
-.block { border:1px solid #ddd; margin:0 0 10px; }
+.block { margin:0 0 10px; }
 .block .block-title { border-bottom:1px solid #ddd; padding:3px 10px; }
 .block .block-title strong { font-size:14px; font-weight:bold; }
 .block .block-title strong span {}
@@ -715,7 +789,7 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid .availability { line-height:21px; }
 .products-grid .actions { bottom:12px; }
 .col2-left-layout .products-grid,
-.col2-right-layout .products-grid { width:632px; margin:0 auto; }
+.col2-right-layout .products-grid { width:735px; margin:0 auto; }
 .col1-layout .products-grid { width:790px; margin:0 auto; }
 
 /* View Type: List */
@@ -1464,4 +1538,9 @@ tr.summary-details-excluded { font-style:italic; }
 }
 .payment-logos a img {
   margin-right: 0;
+}
+
+
+.col-left .nav-container{
+    position: relative;
 }
