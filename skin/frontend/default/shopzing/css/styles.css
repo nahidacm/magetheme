@@ -94,7 +94,8 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { padding:20px; text-align:left; }
 .main-container {}
-.main { margin:10px 0; background-color: #E5E5E5; }
+.main { margin:10px 0; }
+.main-home{background-color: #E5E5E5;}
 
 /* Base Columns */
 .col-left { 
@@ -123,8 +124,8 @@ ul,ol         { list-style:none; }
 .col1-layout .col-main { float:none; width:auto; }
 
 /* 2 Columns Layout */
-.col2-left-layout .col-main { float:right;width: 735px; }
-.col2-right-layout .col-main {width: 700px;1192}
+.col2-left-layout .col-main { float:right;width: 735px; background-color: #E5E5E5; }
+.col2-right-layout .col-main {width: 700px;}
 
 /* 3 Columns Layout */
 .col3-layout .col-main { width:484px; margin-left:10px; }
