@@ -31,6 +31,7 @@ $_productCollection = $this->getTopRatedProduct();
                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                 <?php endif; ?>
                     <?php echo $this->getPriceHtml($_product, true) ?>
+                <?php echo $this->getLayout()->createBlock("simonshipping/showcost")->setData('product', $_product)->setTemplate("simonshipping/showcost.phtml")->toHtml(); ?>
                 <div class="actions">
                     <?php if ($_product->isSaleable()): ?>
                         <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>

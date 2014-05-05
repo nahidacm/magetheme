@@ -100,10 +100,10 @@ ul,ol         { list-style:none; }
 /* Base Columns */
 .col-left { 
     float:left; 
-    width:203px; 
-    border:1px solid #ddd; 
+    width:213px; 
+    /*border:1px solid #ddd;*/ 
     padding:5px 5px 0; 
-    margin: 0 10px; 
+    margin: 0 10px 0 0; 
     background-color: #FFFFFF;
 }
 .col-main { 
@@ -555,7 +555,7 @@ tr.summary-details-excluded { font-style:italic; }
 }
 .col-left .nav-container {
     margin: -5px -5px 11px;
-    width: 210px;
+    width: 220px;
 }
 #nav a{
     text-decoration: none;
@@ -593,7 +593,7 @@ tr.summary-details-excluded { font-style:italic; }
     height:100%;
 }
 .col-left #nav li.level-top > a.level-top {
-    background-position: 185px;
+    background-position: 195px;
 }
 #nav li.level-top > ul {
     display: none;
@@ -805,10 +805,10 @@ ul.level0 > li a:hover, #nav li.level-top > ul > li a:hover {
     transition: all 0.2s ease-in-out 0s;
 }
 .products-grid .product-image { display:block; width:218px; height:218px; margin:0 0 10px; }
-.products-grid .product-name { margin:0 0 5px; font-weight:bold; font-size:13px; }
+.products-grid .product-name { margin:0 0 5px; font-weight:bold; font-size:13px; text-align: left; }
 .products-grid .product-name a {color: #3B3B3B; text-decoration: none;}
 .products-grid .product-name a:hover {color: #FF0000;}
-.products-grid .price-box { margin:5px 0; }
+.products-grid .price-box { margin:5px 0; text-align: left; }
 .products-grid .availability { line-height:21px; }
 .products-grid .actions { bottom:12px; }
 .col2-left-layout .products-grid,
@@ -877,7 +877,7 @@ ul.level0 > li a:hover, #nav li.level-top > ul > li a:hover {
 /********** < Product Prices */
 .price { white-space:nowrap !important; }
 
-.price-box {font-size: 20px; padding: 10px 0;}
+.price-box {font-size: 15px; padding: 10px 0;}
 .price-box .price { font-weight:bold; }
 
 /* Regular price */
@@ -1163,7 +1163,7 @@ ul.level0 > li a:hover, #nav li.level-top > ul > li a:hover {
 .cart .shipping {margin-top: 20px;}
 
 /* Shopping Cart Totals */
-.cart .totals { float:right; }
+.cart .totals { float:right; max-width: 230px; }
 .cart .totals table { width:100%; }
 .cart .totals table th,
 .cart .totals table td { padding:5px; }
